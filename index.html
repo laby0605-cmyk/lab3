@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EysCafe Login and Sign-Up">
+    <title>EysCafe</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+    <main class="container-fluid auth-container">
+        <div class="row min-vh-100">
+            <section class="col-lg-6 d-none d-lg-flex auth-intro">
+                <div class="intro-content">
+                    <div class="coffee-logo">
+                        <i class="bi bi-cup-hot-fill"></i>
+                    </div>
+
+                    <h1>EysCafe</h1>
+                    <p class="tagline">Your cozy corner, one cup at a time.</p>
+                    <p class="intro-text">
+                        Take a break from the busy day and enjoy freshly brewed coffee,
+                        delicious pastries, and a warm café experience at EysCafe.
+                    </p>
+
+                    <div class="coffee-features">
+                        <div>
+                            <i class="bi bi-cup-hot-fill"></i>
+                            <span>Fresh Coffee</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-heart-fill"></i>
+                            <span>Made with Love</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-stars"></i>
+                            <span>Cozy Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-lg-6 auth-form-side">
+                <div class="mobile-brand d-lg-none text-center">
+                    <div class="mobile-logo">
+                        <i class="bi bi-cup-hot-fill"></i>
+                    </div>
+                    <h1>EysCafe</h1>
+                    <p>Your cozy corner, one cup at a time.</p>
+                </div>
+
+                <div class="auth-card mx-auto">
+                    <ul class="nav nav-pills auth-tabs mb-4" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="pill"
+                                data-bs-target="#login" type="button" role="tab"
+                                aria-controls="login" aria-selected="true">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>Log In
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="signup-tab" data-bs-toggle="pill"
+                                data-bs-target="#signup" type="button" role="tab"
+                                aria-controls="signup" aria-selected="false">
+                                <i class="bi bi-person-plus-fill me-2"></i>Sign Up
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="authTabsContent">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel"
+                            aria-labelledby="login-tab">
+                            <div class="form-heading">
+                                <span class="small-label">WELCOME BACK</span>
+                                <h2>Welcome Back!</h2>
+                                <p>Log in to continue your EysCafe experience.</p>
+                            </div>
+
+                            <form action="landing.html" method="get">
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">
+                                        Email Address or Username
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-person-fill"></i>
+                                        </span>
+                                        <input type="text" class="form-control" id="loginEmail"
+                                            name="loginEmail" placeholder="Enter your email or username" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span>
+                                        <input type="password" class="form-control" id="loginPassword"
+                                            name="loginPassword" placeholder="Enter your password" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">
+                                        Remember me
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-cafe w-100">
+                                    <i class="bi bi-box-arrow-in-right me-2"></i>Log In
+                                </button>
+                            </form>
+
+                            <p class="switch-text">
+                                Don't have an account?
+                                <button type="button" class="text-button"
+                                    data-bs-target="#signup" data-bs-toggle="pill">
+                                    Sign Up
+                                </button>
+                            </p>
+                        </div>
+
+                        <div class="tab-pane fade" id="signup" role="tabpanel"
+                            aria-labelledby="signup-tab">
+                            <div class="form-heading">
+                                <span class="small-label">JOIN EYSCAFE</span>
+                                <h2>Create an Account</h2>
+                                <p>Sign up and make yourself at home.</p>
+                            </div>
+
+                            <form action="landing.html" method="get">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName"
+                                            name="firstName" placeholder="First name" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName"
+                                            name="lastName" placeholder="Last name" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 mt-3">
+                                    <label for="gender" class="form-label">Gender</label>
+                                    <select class="form-select" id="gender" name="gender" required>
+                                        <option value="" selected disabled>Select gender</option>
+                                        <option value="female">Female</option>
+                                        <option value="male">Male</option>
+                                        <option value="prefer-not">Prefer not to say</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-envelope-fill"></i>
+                                        </span>
+                                        <input type="email" class="form-control" id="signupEmail"
+                                            name="signupEmail" placeholder="example@email.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="signupPassword" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span>
+                                        <input type="password" class="form-control" id="signupPassword"
+                                            name="signupPassword" placeholder="Create a password"
+                                            minlength="6" required>
+                                    </div>
+                                    <div class="form-text">
+                                        Password must contain at least 6 characters.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">
+                                        Confirm Password
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-shield-lock-fill"></i>
+                                        </span>
+                                        <input type="password" class="form-control" id="confirmPassword"
+                                            name="confirmPassword" placeholder="Confirm your password" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the
+                                        <a href="#" class="terms-link">Terms and Conditions</a>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-cafe w-100">
+                                    <i class="bi bi-person-plus-fill me-2"></i>Sign Up
+                                </button>
+                            </form>
+
+                            <p class="switch-text">
+                                Already have an account?
+                                <button type="button" class="text-button"
+                                    data-bs-target="#login" data-bs-toggle="pill">
+                                    Log In
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
